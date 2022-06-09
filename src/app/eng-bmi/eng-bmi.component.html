@@ -1,1 +1,38 @@
 <p>eng-bmi works!</p>
+
+<div class="container" ng-app="myApp">
+  <h1>Adult BMI Calculator</h1>
+  <div class="row">
+    <h3>1. Height</h3>
+    <p>Feet:</p>
+    <p class="inches">Inches:</p>
+    <input [(ngModel)]="feet" type="number" min="0" max="8" />
+    <input [(ngModel)]="inches" type="number" min="0" max="11" />
+
+    <br />
+    <br />
+
+    <p ng-model>Weight:</p>
+    <input class="dropdown" type="number" min="0" [(ngModel)]="weight" />
+
+    <h1>Your BMI is</h1>
+
+    <h3>You are</h3>
+
+    <div></div>
+
+    <button
+      type="button"
+      class="btn btn-primary"
+      (click)="totalResults()"
+    ></button>
+
+    <p>Find out your results {{ result }}</p>
+    <!-- <p *ngIf="this.BMI >= 30"></p>
+    <p *ngIf="this.BMI >= 25 && this.BMI <= 29.9"></p>
+    <p *ngIf="this.BMI >= 18.5 && this.BMI <= 24.9"></p>
+    <p *ngIf="this.BMI <= 18.5"></p> -->
+
+    <!-- <div id="displayDiv">{{ totalResults() }}</div> -->
+  </div>
+</div>
